@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD Regional Prompter Mapper</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>SD Regional Prompter Mapper</h1>
+        <canvas id="gridCanvas"></canvas>
+        <div class="controls">
+            <button id="generateBtn">Generate Information</button>
+			<button id="previewToggleBtn">Switch to Preview Mode</button>
+			<div class="gridSizeControl">
+				<label for="gridWidthInput">Grid Width:</label>
+				<input type="number" id="gridWidthInput" min="512" max="2048" value="512">
+				<label for="gridHeightInput">Grid Height:</label>
+				<input type="number" id="gridHeightInput" min="512" max="2048" value="512">
+			</div>
+        </div>
+        <div class="output">
+            <h2>Output:</h2>
+            <div>
+                <label>ADDCOL, ADDROW Template:</label>
+                <textarea id="templateOutput" readonly></textarea>
+            </div>
+            <div>
+                <label>Divide Ratio:</label>
+                <textarea id="ratioOutput" readonly></textarea>
+            </div>
+            <div>
+                <label>Prompt for Stable Diffusion:</label>
+                <textarea id="promptOutput" readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+	<div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+        <h2>Feedback</h2>
+        <p id="feedbackMessage"></p>
+    </div>
+</div>
+</body>
+</html>
