@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let zoomLevel = 1;
     let panX = 0;
     let panY = 0;
+    let isPreviewMode = false;
 
     function zoom(e) {
         const scaleFactor = 1.1;
@@ -145,9 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
         redrawRegions();
         pushToHistory();
     }
-
-    let isPreviewMode = false;
-    const previewToggleButton = document.getElementById('previewToggleBtn');
 
     previewToggleButton.addEventListener('click', function() {
         isPreviewMode = !isPreviewMode;
